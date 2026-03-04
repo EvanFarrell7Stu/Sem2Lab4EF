@@ -24,12 +24,11 @@ public class ProductController {
 
 
     Product saved = productService.addProduct(product);
-
     return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 
     }
 
-    @GetMapping("/get")
+    @GetMapping("/getAllProducts")
     public ResponseEntity<List<Product>> getAllProducts(){
         return ResponseEntity.ok(productService.getAllProducts());
     }
